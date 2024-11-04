@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Government Cheese</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Snipcart integration -->
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">GOVERNMENT CHEESE</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="shop-section">
+        <h1 class="section-title">SHOP</h1>
+        <div class="products-grid">
+            <!-- Product Card Template -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="../assets/images/tshirt-1.jpg" alt="Classic Tee">
+                    <div class="hover-effect"></div>
+                </div>
+                <div class="product-info">
+                    <h3>Classic Tee</h3>
+                    <p class="price">$29.99</p>
+                    <button class="snipcart-add-item product-button"
+                        data-item-id="classic-tee"
+                        data-item-price="29.99"
+                        data-item-url="/shop"
+                        data-item-description="Classic Government Cheese T-Shirt"
+                        data-item-image="/assets/images/tshirt-1.jpg"
+                        data-item-name="Classic Tee">
+                        Pre-order Now
+                    </button>
+                </div>
+            </div>
+            <!-- Add more product cards as needed -->
+        </div>
+        <div class="newsletter-signup">
+            <h3>Stay Updated</h3>
+            <form id="newsletterForm">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Government Cheese. All rights reserved.</p>
+    </footer>
+
+    <!-- Snipcart script -->
+    <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
+    <div hidden id="snipcart" data-api-key="YOUR_API_KEY"></div>
+</body>
+</html>
 
