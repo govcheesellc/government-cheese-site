@@ -49,16 +49,45 @@
         <p>&copy; 2024 Government Cheese. All rights reserved.</p>
     </footer>
 
-    <!-- Snipcart script with error handling -->
+    <!-- Snipcart script with API key and retry logic -->
     <script>
         window.SnipcartSettings = {
             publicApiKey: 'ST_ZDJjMjY5ODctZjMyZC00N2VhLTkzNDItNjg0ZGFmYTY1YmY3NjM4NjY0MTQ3NTc5NTEyNjM1',
             loadStrategy: 'on-user-interaction',
         };
 
-        // Load Snipcart with error handling
+        // Retry logic for loading Snipcart
+        function loadSnipcartWithRetry(retries = 3, delay = 2000) {
+            let attempts = 0;
+            const loadSnipcartScript = () => {
+                try {
+                    if (window.LoadSnipcart) {
+                        window.LoadSnipcart();
+                    } else {
+                        throw new Error("Snipcart script not yet available.");
+                    }
+                } catch (error) {
+                    console.error("Error loading Snipcart:", error);
+                    attempts++;
+                    if (attempts < retries) {
+                        console.log(`Retrying Snipcart load... (${attempts})`);
+                        setTimeout(loadSnipcartScript, delay);
+                    } else {
+                        alert("Unable to load cart. Please try again later.");
+                    }
+                }
+            };
+            loadSnipcartScript();
+        }
+
         document.addEventListener("DOMContentLoaded", () => {
-            loadSnipcartWithRetry();
+            if (window.SnipcartSettings.loadStrategy === 'on-user-interaction') {
+                ["click", "mouseover"].forEach(event =>
+                    document.addEventListener(event, loadSnipcartWithRetry, { once: true })
+                );
+            } else {
+                loadSnipcartWithRetry();
+            }
         });
     </script>
 </body>
