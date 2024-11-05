@@ -36,10 +36,12 @@
                     <button class="snipcart-add-item product-button"
                         data-item-id="classic-tee"
                         data-item-price="29.99"
-                        data-item-url="/shop"
+                        data-item-url="/pages/shop.html"
                         data-item-description="Classic Government Cheese T-Shirt"
-                        data-item-image="/assets/images/tshirt-1.jpg"
-                        data-item-name="Classic Tee">
+                        data-item-image="../assets/images/tshirt-1.jpg"
+                        data-item-name="Classic Tee"
+                        data-item-custom1-name="Order Type"
+                        data-item-custom1-options="Preorder|In Stock">
                         Pre-order Now
                     </button>
                 </div>
@@ -61,7 +63,6 @@
 
     <!-- Snipcart script -->
     <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
-    <div hidden id="snipcart" data-api-key="YOUR_API_KEY"></div>
+    <div hidden id="snipcart" data-api-key="YOUR_API_KEY"></div> <!-- Replace YOUR_API_KEY with your actual API key -->
 </body>
 </html>
-
