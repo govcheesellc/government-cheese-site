@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | Government Cheese</title>
+    <meta name="description" content="Explore our quirky merchandise at Government Cheese. Shop now for unique items!">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="main-header">
-        <nav class="nav-container">
+        <nav class="nav-container" role="navigation">
             <div class="logo">GOVERNMENT CHEESE</div>
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/shop.html">Shop</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,7 +26,7 @@
             <!-- Product Card Template -->
             <div class="product-card">
                 <div class="product-image">
-                    <img src="../assets/images/tshirt-1.jpg" alt="Classic Tee">
+                    <img src="../assets/images/tshirt-1.jpg" alt="Classic Tee" loading="lazy">
                     <div class="hover-effect"></div>
                 </div>
                 <div class="product-info">
@@ -42,11 +43,12 @@
                     </button>
                 </div>
             </div>
+            <!-- Add more product cards as needed -->
         </div>
         <div class="newsletter-signup">
             <h3>Stay Updated</h3>
-            <form id="newsletterForm">
-                <input type="email" placeholder="Enter your email">
+            <form id="newsletterForm" aria-label="Newsletter Signup">
+                <input type="email" placeholder="Enter your email" required aria-label="Email">
                 <button type="submit">Subscribe</button>
             </form>
         </div>
@@ -63,7 +65,40 @@
             loadStrategy: 'on-user-interaction',
         };
 
-        (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],e=document.querySelector("#snipcart"),i=document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),n=document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);e||(e=document.createElement("div"),e.id="snipcart",e.setAttribute("hidden","true"),document.body.appendChild(e)),v(e),i||(i=document.createElement("script"),i.src=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`,i.async=!0,t.appendChild(i)),n||(n=document.createElement("link"),n.rel="stylesheet",n.type="text/css",n.href=`${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`,t.prepend(n)),m.forEach(g=>document.removeEventListener(g,o))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+        (() => {
+            var c, d;
+            (d = (c = window.SnipcartSettings).version) != null || (c.version = "3.0");
+            var s, S;
+            (S = (s = window.SnipcartSettings).timeoutDuration) != null || (s.timeoutDuration = 2750);
+            var l, p;
+            (p = (l = window.SnipcartSettings).domain) != null || (l.domain = "cdn.snipcart.com");
+            var w, u;
+            (u = (w = window.SnipcartSettings).protocol) != null || (w.protocol = "https");
+            var f = window.SnipcartSettings.version.includes("v3.0.0-ci") || window.SnipcartSettings.version != "3.0" && window.SnipcartSettings.version.localeCompare("3.4.0", void 0, { numeric: !0, sensitivity: "base" }) === -1,
+                m = ["focus", "mouseover", "touchmove", "scroll", "keydown"];
+            window.LoadSnipcart = o;
+            document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", r) : r();
+
+            function r() {
+                window.SnipcartSettings.loadStrategy ? window.SnipcartSettings.loadStrategy === "on-user-interaction" && (m.forEach(t => document.addEventListener(t, o)), setTimeout(o, window.SnipcartSettings.timeoutDuration)) : o()
+            }
+
+            var a = !1;
+
+            function o() {
+                if (a) return;
+                a = !0;
+                let t = document.getElementsByTagName("head")[0],
+                    e = document.querySelector("#snipcart"),
+                    i = document.querySelector(`src[src^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][src$="snipcart.js"]`),
+                    n = document.querySelector(`link[href^="${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}"][href$="snipcart.css"]`);
+                e || (e = document.createElement("div"), e.id = "snipcart", e.setAttribute("hidden", "true"), document.body.appendChild(e)), v(e), i || (i = document.createElement("script"), i.src = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.js`, i.async = !0, t.appendChild(i)), n || (n = document.createElement("link"), n.rel = "stylesheet", n.type = "text/css", n.href = `${window.SnipcartSettings.protocol}://${window.SnipcartSettings.domain}/themes/v${window.SnipcartSettings.version}/default/snipcart.css`, t.prepend(n)), m.forEach(g => document.removeEventListener(g, o))
+            }
+
+            function v(t) {
+                !f || (t.dataset.apiKey = window.SnipcartSettings.publicApiKey, window.SnipcartSettings.addProductBehavior && (t.dataset.configAddProductBehavior = window.SnipcartSettings.addProductBehavior), window.SnipcartSettings.modalStyle && (t.dataset.configModalStyle = window.SnipcartSettings.modalStyle), window.SnipcartSettings.currency && (t.dataset.currency = window.SnipcartSettings.currency), window.SnipcartSettings.templatesUrl && (t.dataset.templatesUrl = window.SnipcartSettings.templatesUrl))
+            }
+        })();
     </script>
 </body>
 </html>
