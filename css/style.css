@@ -85,6 +85,53 @@ footer {
     border-top: 2px solid var(--primary-color);
 }
 
+/* About Page Styling */
+.about-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+    font-family: var(--font-primary);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: var(--primary-color);
+}
+
+.cheese-values-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    line-height: 1.6;
+}
+
+.cheese-values-list li {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--accent-color);
+}
+
+.cheesy-quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+    border-top: 1px solid var(--accent-color);
+    padding-top: 1rem;
+    margin-top: 3rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-container {
@@ -101,5 +148,20 @@ footer {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-}
 
+    .about-section {
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .cheesy-quote {
+        font-size: 1rem;
+    }
+}
