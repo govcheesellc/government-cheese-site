@@ -1,5 +1,8 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
+    // Snipcart API Key
+    const snipcartApiKey = 'ST_ZDJjMjY5ODctZjMyZC00N2VhLTkzNDItNjg0ZGFmYTY1YmY3NjM4NjY0MTQ3NTc5NTEyNjM1';
+
     // Waitlist Button and Modal
     const waitlistBtn = document.getElementById('waitlistBtn');
     if (waitlistBtn) {
@@ -7,13 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const modal = document.createElement('div');
             modal.className = 'waitlist-modal';
             modal.innerHTML = `
-                <div class="modal-content">
-                    <h2>Join the Cheese Club</h2>
-                    <form id="waitlistForm">
-                        <input type="email" placeholder="Enter your email" required>
+                <div class="modal-content" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDesc">
+                    <h2 id="modalTitle">Join the Cheese Club</h2>
+                    <form id="waitlistForm" aria-labelledby="modalTitle">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email">
                         <button type="submit">Sign Up</button>
                     </form>
-                    <button class="close-modal">×</button>
+                    <button class="close-modal" aria-label="Close modal">×</button>
                 </div>
             `;
             document.body.appendChild(modal);
@@ -39,15 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(scrollBtn);
 
     window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollBtn.style.display = 'block';
-        } else {
-            scrollBtn.style.display = 'none';
-        }
+        scrollBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? 'block' : 'none';
     };
 
     scrollBtn.onclick = function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     // Page Transitions
@@ -86,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Easter egg - cheese rain
     let cheeseCount = 0;
     document.addEventListener('keydown', function(e) {
-        // Trigger cheese rain when user types 'cheese'
         const cheeseCode = [67, 72, 69, 69, 83, 69]; // 'CHEESE'
         if (e.keyCode === cheeseCode[cheeseCount]) {
             cheeseCount++;
