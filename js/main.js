@@ -1,8 +1,5 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Snipcart API Key
-    const snipcartApiKey = 'ST_ZDJjMjY5ODctZjMyZC00N2VhLTkzNDItNjg0ZGFmYTY1YmY3NjM4NjY0MTQ3NTc5NTEyNjM1';
-
     // Waitlist Button and Modal
     const waitlistBtn = document.getElementById('waitlistBtn');
     if (waitlistBtn) {
